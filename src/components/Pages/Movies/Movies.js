@@ -16,7 +16,7 @@ const Movies = () => {
 
   const fetchMovies = async() => {
     
-    const { data } = await axios.get(`https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&page=${page}&with_genres=${genreforUrl}&language=en-US&sort_by=popularity.desc`, {
+    const { data } = await axios.get(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&page=${page}&with_genres=${genreforUrl}&language=en-US&sort_by=popularity.desc`, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.REACT_APP_API_READ_ACCESS_TOKEN}`
